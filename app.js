@@ -118,21 +118,29 @@ start.addEventListener('click', () => {
     inputDir = {x:0, y:-1};
     upBtn.addEventListener('click', () => {
         moveSound.play();
+        if(inputDir.x === 0 && inputDir.y === 1)
+            return;
         inputDir.x = 0;
         inputDir.y = -1;
     })
     downBtn.addEventListener('click', () => {
         moveSound.play();
+        if(inputDir.x === 0 && inputDir.y === -1)
+            return;
         inputDir.x = 0;
         inputDir.y = 1;
     })
     leftBtn.addEventListener('click', () => {
         moveSound.play();
+        if(inputDir.x === 1 && inputDir.y === 0)
+            return;
         inputDir.x = -1;
         inputDir.y = 0;
     })
     rightBtn.addEventListener('click', () => {
         moveSound.play();
+        if(inputDir.x === -1 && inputDir.y === 0)
+            return;
         inputDir.x = 1;
         inputDir.y = 0;
     })
@@ -140,21 +148,29 @@ start.addEventListener('click', () => {
         moveSound.play();
         switch(e.key){
             case "ArrowUp":
+                if(inputDir.x === 0 && inputDir.y === 1)
+                    return;
                 inputDir.x = 0;
                 inputDir.y = -1;
                 break;
 
             case "ArrowDown":
+                if(inputDir.x === 0 && inputDir.y === -1)
+                    return;
                 inputDir.x = 0;
                 inputDir.y = 1;
                 break;
 
             case "ArrowLeft":
+                if(inputDir.x === 1 && inputDir.y === 0)
+                    return;
                 inputDir.x = -1;
                 inputDir.y = 0;
                 break;
 
             case "ArrowRight":
+                if(inputDir.x === -1 && inputDir.y === 0)
+                    return;
                 inputDir.x = 1;
                 inputDir.y = 0;
                 break;
