@@ -27,7 +27,7 @@ function collide(snakeArr){
             return true;
         } 
     }
-    if(snakeArr[0].x > 20 || snakeArr[0].x <= 0 || snakeArr[0].y > 20 || snakeArr[0].y <= 0){
+    if(snakeArr[0].x >= 21 || snakeArr[0].x <= 0 || snakeArr[0].y >= 21 || snakeArr[0].y <= 0){
         return true;
     }
 }
